@@ -30,8 +30,11 @@ Rscript /data/SJ/projects/flagship_figure/ext_11a/scripts/run_sequenza.R -i smal
 - 필요 환경에 대한 Container로 동작하도록 하여 Cloud 환경에 올려도 발생할 수 있는 문제를 최소화 하였음.
 
 # 파일 경로
+# 📂 Pipeline Path
+**`/data/SJ/pipeline/sequenza_pipeline`**  
 👉 곧 GitHub 백업 후 연구실 메인 디렉토리로 이관 예정
 
+```
 sequenza_pipeline/
 ├── Snakefile
 ├── bin/
@@ -44,12 +47,15 @@ sequenza_pipeline/
 │   └── sequenza.snakefile      # Sequenza Rule 정의
 └── refs/
     └── ref.yaml                # Reference Genome 경로 (현재 GRCh37, 추후 GRCh38 추가 예정)
+```
 
-📂 Analysis Path
+---
 
-/data/SJ/projects/flagship_figure/analysis_pipeline
+# 📂 Analysis Path
+**`/data/SJ/projects/flagship_figure/analysis_pipeline`**  
 👉 곧 GitHub 백업 후 연구실 메인 디렉토리로 이관 예정
 
+```
 analysis_pipeline/
 ├── analysis/
 │   └── 10_post_rt_leg_fb_3-2/           # 예시 샘플명
@@ -87,6 +93,7 @@ analysis_pipeline/
 │   └── sqnz.run.<샘플>.out
 ├── pipeline.cmd.sh                       # 실행 트리거 스크립트
 └── samples.config.yaml                   # 실행에 필요한 Config
+```
 
     
     # 실행 방법
