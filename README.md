@@ -112,7 +112,7 @@ analysis_pipeline/
             tumor_bam: /data/temp_intern/intern/woo/flagship_figure/bam/DB10/10_post_rt_leg_fb_3-2.s.md.ir.bam
         ```
         
-    4. pipline.cmd.sh 파일을 복사하여, 아래와 같이 수정합니다.
+   4. pipline.cmd.sh 파일을 복사하여, 아래와 같이 수정합니다.
         
         ```bash
         wkdir="/data/SJ/projects/flagship_figure/analysis_pipeline" #분석이 진행될 경로 - 수정 필요
@@ -136,8 +136,8 @@ analysis_pipeline/
         echo $cmd
         ```
         
-    5. conda activate snakemake : snakemake 실행에 필요한 conda 환경 activate
-    6. bash pipline.cmd.sh | /bin/bash : bash shell 실행 후, 출력되는 스크립트 확인 후 | /bin/bash로 실제 실행할 것.
+   5. conda activate snakemake : snakemake 실행에 필요한 conda 환경 activate
+   6. bash pipline.cmd.sh | /bin/bash : bash shell 실행 후, 출력되는 스크립트 확인 후 | /bin/bash로 실제 실행할 것.
 
 # 실행 화면
 
