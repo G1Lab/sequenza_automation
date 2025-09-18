@@ -1,4 +1,4 @@
-# Sequenza
+# Sequenza Automation
 
 # Manual로 작업 수행하기
 
