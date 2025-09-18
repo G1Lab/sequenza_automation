@@ -98,9 +98,9 @@ analysis_pipeline/
     
 # 실행 방법
     
-    1. 특정 위치에 분석에 필요한 폴더를 생성합니다. 분석이 실행될 폴더
-    2. Sequenza 수행에 필요한 Normal / Tumor Bam 파일을 준비합니다. ***(Tumor Only로는 동작하지 않습니다.)***
-    3. samples.config.yaml 파일을 복사하여, 아래와 형식에 맞춰 수정합니다.
+   1. 특정 위치에 분석에 필요한 폴더를 생성합니다. 분석이 실행될 폴더
+   2. Sequenza 수행에 필요한 Normal / Tumor Bam 파일을 준비합니다. ***(Tumor Only로는 동작하지 않습니다.)***
+   3. samples.config.yaml 파일을 복사하여, 아래와 형식에 맞춰 수정합니다.
         
         ```yaml
         samples:
