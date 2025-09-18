@@ -30,59 +30,64 @@ Rscript /data/SJ/projects/flagship_figure/ext_11a/scripts/run_sequenza.R -i smal
 - 필요 환경에 대한 Container로 동작하도록 하여 Cloud 환경에 올려도 발생할 수 있는 문제를 최소화 하였음.
 
 # 파일 경로
+👉 곧 GitHub 백업 후 연구실 메인 디렉토리로 이관 예정
 
-- Pipeline Path : **/data/SJ/pipeline/sequenza_pipeline** → **곧 github 백업 관련 작업이 완료되는대로 개인 폴더가 아닌 연구실 메인 디렉토리로 이관 예정**
+sequenza_pipeline/
 ├── Snakefile
-├── bin
-│   ├── benchmarks_summary.py → Pipeline 실행 후, 실행 시간, CPU 사용량 등에 대한 계산을 위한 Python Script
-│   ├── config.py → Pipeline 실행과 관련한 Config를 읽어오는 Script
-│   └── run_sequenza.R → Sequenza 실행 시 필요한 R script
-├── envs
-│   └── cluster.json → cluster 환경 구성에 필요하지만 현재는 별도로 사용하지 않음.
-├── modules
-│   └── sequenza.snakefile → Sequenza 사용에 필요한 Rule이 작성되어 있음.
-└── refs
-      └── ref.yaml → Reference Genome Sequence를 참조할 수 있도록 경로가 작성된 파일. 현재 GRCh37로 되어있고, 추후 GRCh38 추가 예정.
-    
+├── bin/
+│   ├── benchmarks_summary.py   # 실행 시간, CPU 사용량 계산 스크립트
+│   ├── config.py               # Pipeline 실행 관련 Config 로드 스크립트
+│   └── run_sequenza.R          # Sequenza 실행용 R 스크립트
+├── envs/
+│   └── cluster.json            # cluster 환경 구성 (현재는 미사용)
+├── modules/
+│   └── sequenza.snakefile      # Sequenza Rule 정의
+└── refs/
+    └── ref.yaml                # Reference Genome 경로 (현재 GRCh37, 추후 GRCh38 추가 예정)
 
-- Analysis Path : **/data/SJ/projects/flagship_figure/analysis_pipeline** → **곧 github 백업 관련 작업이 완료되는대로 개인 폴더가 아닌 연구실 메인 디렉토리로 이관 예정**
-    
-    ├── analysis
-    │   └── 10_post_rt_leg_fb_3-2 **[예시 샘플명]**
-    │       ├── output **[output 예시]**
-    │       │   ├── 10_post_rt_leg_fb_3-2_CN_bars.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_CP_contours.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_alternative_fit.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_alternative_solutions.txt
-    │       │   ├── 10_post_rt_leg_fb_3-2_chromosome_depths.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_chromosome_view.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_confints_CP.txt
-    │       │   ├── 10_post_rt_leg_fb_3-2_gc_plots.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_genome_view.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_model_fit.pdf
-    │       │   ├── 10_post_rt_leg_fb_3-2_mutations.txt
-    │       │   ├── 10_post_rt_leg_fb_3-2_segments.txt
-    │       │   ├── 10_post_rt_leg_fb_3-2_sequenza_cp_table.RData
-    │       │   ├── 10_post_rt_leg_fb_3-2_sequenza_extract.RData
-    │       │   └── 10_post_rt_leg_fb_3-2_sequenza_log.txt
-    │       └── seqz **[중간 생성물]**
-    │           ├── 10_post_rt_leg_fb_3-2.seqz.gz
-    │           ├── 10_post_rt_leg_fb_3-2.seqz.gz.tbi
-    │           ├── 10_post_rt_leg_fb_3-2.small.seqz.gz
-    │           └── 10_post_rt_leg_fb_3-2.small.seqz.gz.tbi
-    ├── benchmarks **[수행 시간, CPU 사용량 측정]**
-    │   ├── sqnz.bam2seqz.10_post_rt_leg_fb_3-2.txt
-    │   ├── sqnz.binning.10_post_rt_leg_fb_3-2.txt
-    │   └── sqnz.run.10_post_rt_leg_fb_3-2.txt
-    ├── logs **[실행 시 산출되는 Log 파일]**
-    │   ├── sqnz.bam2seqz.10_post_rt_leg_fb_3-2.err
-    │   ├── sqnz.bam2seqz.10_post_rt_leg_fb_3-2.out
-    │   ├── sqnz.binning.10_post_rt_leg_fb_3-2.err
-    │   ├── sqnz.binning.10_post_rt_leg_fb_3-2.out
-    │   ├── sqnz.run.10_post_rt_leg_fb_3-2.err
-    │   └── sqnz.run.10_post_rt_leg_fb_3-2.out
-    ├── pipline.cmd.sh **[pipeline 실행 시, Trigger Script]**
-    └── samples.config.yaml **[실행에 필요한 Config]**
+📂 Analysis Path
+
+/data/SJ/projects/flagship_figure/analysis_pipeline
+👉 곧 GitHub 백업 후 연구실 메인 디렉토리로 이관 예정
+
+analysis_pipeline/
+├── analysis/
+│   └── 10_post_rt_leg_fb_3-2/           # 예시 샘플명
+│       ├── output/                      # 최종 결과물
+│       │   ├── *_CN_bars.pdf
+│       │   ├── *_CP_contours.pdf
+│       │   ├── *_alternative_fit.pdf
+│       │   ├── *_alternative_solutions.txt
+│       │   ├── *_chromosome_depths.pdf
+│       │   ├── *_chromosome_view.pdf
+│       │   ├── *_confints_CP.txt
+│       │   ├── *_gc_plots.pdf
+│       │   ├── *_genome_view.pdf
+│       │   ├── *_model_fit.pdf
+│       │   ├── *_mutations.txt
+│       │   ├── *_segments.txt
+│       │   ├── *_sequenza_cp_table.RData
+│       │   ├── *_sequenza_extract.RData
+│       │   └── *_sequenza_log.txt
+│       └── seqz/                        # 중간 생성물
+│           ├── *.seqz.gz
+│           ├── *.seqz.gz.tbi
+│           ├── *.small.seqz.gz
+│           └── *.small.seqz.gz.tbi
+├── benchmarks/                           # 실행 성능 기록
+│   ├── sqnz.bam2seqz.<샘플>.txt
+│   ├── sqnz.binning.<샘플>.txt
+│   └── sqnz.run.<샘플>.txt
+├── logs/                                 # 실행 로그
+│   ├── sqnz.bam2seqz.<샘플>.err
+│   ├── sqnz.bam2seqz.<샘플>.out
+│   ├── sqnz.binning.<샘플>.err
+│   ├── sqnz.binning.<샘플>.out
+│   ├── sqnz.run.<샘플>.err
+│   └── sqnz.run.<샘플>.out
+├── pipeline.cmd.sh                       # 실행 트리거 스크립트
+└── samples.config.yaml                   # 실행에 필요한 Config
+
     
     # 실행 방법
     
