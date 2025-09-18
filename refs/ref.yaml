@@ -1,0 +1,3 @@
+species: Human
+genome : /data/ref/human/human_g1k_v37
+pipedir : /data/SJ/pipeline/sequenza_pipeline

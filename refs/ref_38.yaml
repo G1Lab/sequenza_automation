@@ -1,0 +1,3 @@
+species: Human
+genome : /data/ref/hg38/Homo_sapiens_ssembly38/Homo_sapiens_assembly38
+pipedir : /data/SJ/pipeline/sequenza_pipeline
