@@ -32,18 +32,17 @@ Rscript /data/SJ/projects/flagship_figure/ext_11a/scripts/run_sequenza.R -i smal
 # 파일 경로
 
 - Pipeline Path : **/data/SJ/pipeline/sequenza_pipeline** → **곧 github 백업 관련 작업이 완료되는대로 개인 폴더가 아닌 연구실 메인 디렉토리로 이관 예정**
-    
-    ├── Snakefile
-    ├── bin
-    │   ├── benchmarks_summary.py → Pipeline 실행 후, 실행 시간, CPU 사용량 등에 대한 계산을 위한 Python Script
-    │   ├── [config.py](http://config.py/) → Pipeline 실행과 관련한 Config를 읽어오는 Script
-    │   └── run_sequenza.R → Sequenza 실행 시 필요한 R script
-    ├── envs
-    │   └── cluster.json → cluster 환경 구성에 필요하지만 현재는 별도로 사용하지 않음.
-    ├── modules
-    │   └── sequenza.snakefile → Sequenza 사용에 필요한 Rule이 작성되어 있음.
-    └── refs
-          └── ref.yaml → **Reference Genome Sequence를 참조할 수 있도록 경로가 작성된 파일. 현재 GRCh37로 되어있고, 추후 GRCh38 추가 예정.**
+├── Snakefile
+├── bin
+│   ├── benchmarks_summary.py → Pipeline 실행 후, 실행 시간, CPU 사용량 등에 대한 계산을 위한 Python Script
+│   ├── config.py → Pipeline 실행과 관련한 Config를 읽어오는 Script
+│   └── run_sequenza.R → Sequenza 실행 시 필요한 R script
+├── envs
+│   └── cluster.json → cluster 환경 구성에 필요하지만 현재는 별도로 사용하지 않음.
+├── modules
+│   └── sequenza.snakefile → Sequenza 사용에 필요한 Rule이 작성되어 있음.
+└── refs
+      └── ref.yaml → Reference Genome Sequence를 참조할 수 있도록 경로가 작성된 파일. 현재 GRCh37로 되어있고, 추후 GRCh38 추가 예정.
     
 
 - Analysis Path : **/data/SJ/projects/flagship_figure/analysis_pipeline** → **곧 github 백업 관련 작업이 완료되는대로 개인 폴더가 아닌 연구실 메인 디렉토리로 이관 예정**
